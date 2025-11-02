@@ -1,0 +1,288 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: black;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background: #ff004f;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    background: #d90042;
+}
+
+/* Main Section */
+.details-section {
+    padding: 80px 0;
+}
+
+.main-title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main-title span {
+    color: #ff004f;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #ababab;
+    margin-bottom: 60px;
+}
+
+/* Experience List (Replaces Timeline) */
+.experience-list {
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.experience-item {
+    background: #262626;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 4px solid #ff004f;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 0, 79, 0.3);
+}
+
+.exp-date {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #ff004f;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.experience-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.experience-item h4 {
+    font-size: 18px;
+    color: #ff004f;
+    margin-bottom: 15px;
+}
+
+.experience-item p {
+    font-size: 15px;
+    color: #ababab;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tags span {
+    padding: 6px 15px;
+    background: rgba(255, 0, 79, 0.2);
+    border: 1px solid #ff004f;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #ff004f;
+}
+
+/* Certifications Section */
+.certifications {
+    margin-top: 80px;
+}
+
+.section-title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #ff004f;
+    margin: 15px auto 0;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.cert-card {
+    background: #262626;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid transparent;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.cert-card:hover {
+    border-color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.cert-icon {
+    font-size: 50px;
+    color: #ff004f;
+    margin-bottom: 20px;
+}
+
+.cert-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.cert-card p {
+    font-size: 14px;
+    color: #ababab;
+    margin-bottom: 15px;
+}
+
+.cert-year {
+    display: inline-block;
+    padding: 6px 20px;
+    background: rgba(255, 0, 79, 0.2);
+    border: 1px solid #ff004f;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #ff004f;
+    font-weight: 600;
+}
+
+.cert-link {
+    margin-top: 15px;
+    color: #ff004f;
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+}
+
+.cert-card:hover .cert-link {
+    display: block;
+}
+
+/* Footer */
+.footer {
+    background: #262626;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+
+.footer p {
+    color: #ababab;
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 35px;
+    }
+
+    .experience-item h3 {
+        font-size: 20px;
+    }
+
+    .experience-item h4 {
+        font-size: 16px;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .back-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-title {
+        font-size: 28px;
+    }
+
+    .experience-item {
+        padding: 20px;
+    }
+}
